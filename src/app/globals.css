@@ -1,26 +1,76 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------- Light Theme ---------- */
+@plugin "daisyui/theme" {
+  name: "bookverse-light";
+default: false; 
+  prefersdark: false; 
+  color-scheme: light;
+
+  /* Page & cards */
+  --color-base-100: oklch(98% 0.02 240); /* card background */
+  --color-base-200: oklch(95% 0.03 240);
+  --color-base-300: oklch(92% 0.04 240);
+  --color-base-content: oklch(20% 0.05 240); /* text */
+
+  /* Primary (buttons, links) */
+  --color-primary: oklch(55% 0.3 240);        /* soft blue */
+  --color-primary-content: oklch(98% 0.01 240); /* text on primary */
+
+  /* Secondary (accents) */
+  --color-secondary: oklch(70% 0.25 200);      
+  --color-secondary-content: oklch(98% 0.01 200);
+
+  /* Accent (success highlights) */
+  --color-accent: oklch(65% 0.25 160);
+  --color-accent-content: oklch(98% 0.01 160);
+
+  /* Neutral background */
+  --color-neutral: oklch(50% 0.05 240);
+  --color-neutral-content: oklch(98% 0.01 240);
+
+  /* Feedback */
+  --color-info: oklch(70% 0.2 220);
+  --color-info-content: oklch(98% 0.01 220);
+  --color-success: oklch(65% 0.25 140);
+  --color-success-content: oklch(98% 0.01 140);
+  --color-warning: oklch(80% 0.25 40);
+  --color-warning-content: oklch(20% 0.05 40);
+  --color-error: oklch(60% 0.25 20);
+  --color-error-content: oklch(98% 0.01 20);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ---------- Dark Theme ---------- */
+@plugin "daisyui/theme" {
+  name: "bookverse-dark";
+  default: true;          /* not default */
+  prefersdark: true;       /* dark preferred */
+  color-scheme: dark;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-base-100: oklch(15% 0.02 240); /* card bg */
+  --color-base-200: oklch(20% 0.03 240);
+  --color-base-300: oklch(25% 0.04 240);
+  --color-base-content: oklch(98% 0.01 240); /* text */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-primary: oklch(60% 0.3 240);       /* light blue buttons */
+  --color-primary-content: oklch(20% 0.05 240);
+
+  --color-secondary: oklch(55% 0.25 200);    /* gold accent */
+  --color-secondary-content: oklch(98% 0.01 200);
+
+  --color-accent: oklch(50% 0.25 160);       /* teal highlight */
+  --color-accent-content: oklch(98% 0.01 160);
+
+  --color-neutral: oklch(20% 0.05 240);      /* page bg */
+  --color-neutral-content: oklch(98% 0.01 240);
+
+  --color-info: oklch(70% 0.2 220);
+  --color-info-content: oklch(98% 0.01 220);
+  --color-success: oklch(60% 0.25 140);
+  --color-success-content: oklch(98% 0.01 140);
+  --color-warning: oklch(80% 0.25 40);
+  --color-warning-content: oklch(20% 0.05 40);
+  --color-error: oklch(60% 0.25 20);
+  --color-error-content: oklch(98% 0.01 20);
 }
