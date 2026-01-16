@@ -72,19 +72,18 @@ export default function LandingPage() {
       {/* ---------- Section 4: Why BookVerse ---------- */}
       <section className="p-8">
         <Container>
-
           <h2 className="text-4xl font-bold text-primary mb-6 text-center">Why BookVerse?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="card bg-base-300 shadow hover:shadow-lg p-6 text-center">
-              <h3 className="text-xl font-bold mb-2">Wide Selection</h3>
+              <h3 className="text-secondary text-xl font-bold mb-2">Wide Selection</h3>
               <p>Thousands of books from all genres at your fingertips.</p>
             </div>
             <div className="card bg-base-300 shadow hover:shadow-lg p-6 text-center">
-              <h3 className="text-xl font-bold mb-2">Easy Access</h3>
+              <h3 className="text-secondary text-xl font-bold mb-2">Easy Access</h3>
               <p>Quick search and browse features make finding books effortless.</p>
             </div>
             <div className="card bg-base-300 shadow hover:shadow-lg p-6 text-center">
-              <h3 className="text-xl font-bold mb-2">Community Reviews</h3>
+              <h3 className="text-secondary text-xl font-bold mb-2">Community Reviews</h3>
               <p>Read honest reviews and ratings from real readers.</p>
             </div>
           </div>
@@ -93,7 +92,7 @@ export default function LandingPage() {
 
       {/* ---------- Section 5: Popular Authors ---------- */}
       <section className="p-8 bg-base-200 rounded-lg">
-        <h2 className="text-4xl font-bold text-primary mb-6 text-center">Popular Authors</h2>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Popular Authors</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
           {[
             { name: "James Clear", image: "/books-authors/james-clear.webp" },
@@ -157,7 +156,7 @@ export default function LandingPage() {
                   />
                 </div>
                 <p className="italic text-base-content">{t.review}</p>
-                <p className="font-bold mt-4 text-primary">— {t.name}</p>
+                <p className="font-bold mt-4 text-secondary">— {t.name}</p>
               </div>
             ))}
           </div>
@@ -166,12 +165,12 @@ export default function LandingPage() {
       </section>
 
       {/* ---------- Section 7: Call to Action ---------- */}
-      <section className="hero min-h-[40vh] bg-primary rounded-lg text-primary-content p-8">
+      <section className="hero min-h-[40vh] bg-secondary rounded-lg text-primary-content py-14 mb-14">
         <div className="hero-content flex-col lg:flex-row justify-between items-center">
           <div className="text-center! lg:text-left space-y-4">
             <h2 className="text-5xl font-bold">Ready to explore your next book?</h2>
             <p className="text-lg">Join BookVerse today and start your reading journey!</p>
-            <Link href="/login" className="btn btn-secondary btn-lg mt-4">
+            <Link href="/login" className="btn btn-primary btn-lg mt-4 font-bold rounded-lg text-white">
               Login Now
             </Link>
           </div>
