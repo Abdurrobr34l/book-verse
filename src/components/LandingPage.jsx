@@ -7,7 +7,7 @@ export default function LandingPage() {
   return (
     <div className="space-y-10 lg:space-y-24">
       {/* ---------- Section 1: Hero ---------- */}
-      <section className="min-h-[70vh] bg-base-200 py-10">
+      <section className="min-h-[70vh] place-content-center bg-base-200 py-10">
         <Container>
           <div className="hero-content flex-col lg:flex-row lg:justify-between lg:items-center p-0 2xl:px-10">
             <div className="text-center lg:text-left lg:max-w-lg space-y-6">
@@ -32,7 +32,7 @@ export default function LandingPage() {
 
       {/* ---------- Section 2: Featured Books ---------- */}
       <section className="py-8">
-        <Container className="min-h-[calc(100vh-148px)]">
+        <Container>
 
           <h2 className="text-4xl font-bold text-primary mb-6 text-center">Featured Books</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
