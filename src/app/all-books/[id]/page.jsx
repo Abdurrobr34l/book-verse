@@ -5,6 +5,7 @@ import Container from "@/Utilities/Container";
 import books from "@/data/books.json";
 import Image from "next/image";
 import Link from "next/link";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function BookDetailsPage() {
   const params = useParams();       // Next.js hook for dynamic params
@@ -22,8 +23,14 @@ export default function BookDetailsPage() {
     );
   }
 
+  const handleAddToCart = () => {
+    // You can later push this to cart state or API
+    toast.success(`${book.title} added to cart!`);
+  };
+
   return (
     <section className="py-12">
+      <Toaster position="top-right" /> {/* Toast container */}
       <Container>
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Book Image */}
@@ -48,7 +55,9 @@ export default function BookDetailsPage() {
               <Link href="/all-books" className="btn btn-secondary">
                 Back to Books
               </Link>
-              <button className="btn btn-primary">Add to Cart</button>
+              <button className="btn btn-primary" onClick={handleAddToCart}>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
