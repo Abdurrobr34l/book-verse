@@ -5,7 +5,7 @@
     "author": "James Clear",
     "price": 450,
     "description": "A practical guide to building good habits.",
-    "image": "/books/atomic-habits.jpg"
+    "image": "/books/atomic-habits-dots.png"
   },
   {
     "id": "2",
@@ -37,6 +37,6 @@
     "author": "Mark Manson",
     "price": 380,
     "description": "A counterintuitive approach to living a better life.",
-    "image": "/books/subtle-art.jpg"
+    "image": "/books/the-subtle.jpg"
   }
 ]
