@@ -27,7 +27,7 @@ BookVerse is a simple book catalog web application built using **Next.js (App Ro
 - **Book Details Page**
 
   - Shows full information of a selected book
-  - Uses dynamic routing (`/books/[id]`)
+  - Uses dynamic routing (`/all-books/[id]`)
 
 - **Protected Page: Add Book**
 
@@ -90,13 +90,14 @@ BookVerse is a simple book catalog web application built using **Next.js (App Ro
 ```
 Frontend: Next.js 15/16 (App Router), React 19
 
-Backend / Data: Express.js API or JSON file
+Data: JSON file
 
 Styling: TailwindCSS, DaisyUI
 
 Additional: React-icons, React-hot-toast
 
-Authentication: Cookies for mock login (NextAuth.js optional for social login)
+Authentication: LocalStorage or Cookies for mock login
+
 ```
 
 ## Setup & Installation Instructions
