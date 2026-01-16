@@ -38,7 +38,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {books.slice(0, 3).map((book) => (
               <div key={book.id} className="card bg-base-300 shadow-lg hover:shadow-xl transition">
-                <Link href={`/items/${book.id}`}>
+                <Link href={`/all-books/${book.id}`}>
                   <figure className="px-4 pt-4">
                     <Image src={book.image} alt={book.title} className="rounded-lg h-60 object-cover w-full transition-transform duration-300 ease-linear hover:scale-[105%]" width={500} height={300} />
                   </figure>
@@ -49,7 +49,7 @@ export default function LandingPage() {
                   <p className="text-sm text-base-content line-clamp-3">{book.description}</p>
                   <p className="font-bold text-3xl text-primary mt-2">{book.price}<small className="font-bold">৳</small></p>
                   <div className="card-actions justify-end mt-4">
-                    <Link href={`/items/${book.id}`} className="btn btn-secondary btn-sm">
+                    <Link href={`/all-books/${book.id}`} className="btn btn-secondary btn-sm">
                       View Details
                     </Link>
                   </div>

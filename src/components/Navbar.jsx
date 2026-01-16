@@ -47,7 +47,7 @@ export default function Navbar() {
                 className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/">Home</Link></li>
-                <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/items">Books</Link></li>
+                <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/all-books">Books</Link></li>
                 <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/login">Login</Link></li>
               </ul>
             </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 gap-2">
               <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/">Home</Link></li>
-              <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/items">Books</Link></li>
+              <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/all-books">Books</Link></li>
               <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/login">Login</Link></li>
             </ul>
           </div>

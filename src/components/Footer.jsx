@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex space-x-4 mb-4 md:mb-0">
           <Link href="/" className="font-medium hover:text-accent">Home</Link>
           <Link href="/" className="font-medium hover:text-accent">About Us</Link>
-          <Link href="/" className="font-medium hover:text-accent">Books</Link>
+          <Link href="/all-books" className="font-medium hover:text-accent">Books</Link>
           <Link href="/login" className="font-medium hover:text-accent">Login</Link>
         </div>
 

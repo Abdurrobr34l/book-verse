@@ -1,0 +1,63 @@
+import React from "react";
+import Container from "@/Utilities/Container";
+import books from "@/data/books.json";
+import Image from "next/image";
+import Link from "next/link";
+
+// params comes from Next.js App Router
+export default function BookDetailsPage({ params }) {
+  const { id } = params;
+
+  // Find book by id
+    // const { id } = params;
+  console.log("PARAMS ID:", id); // <-- Add this
+  const book = books.find((b) => b.id === id);
+  console.log("BOOK FOUND:", book); // <-- Add this
+
+  if (!book) {
+    return (
+      <Container className="py-20 text-center">
+        <h2 className="text-3xl font-bold text-error">Book not found</h2>
+        <Link href="/all-books" className="btn btn-primary mt-6">
+          Back to Books
+        </Link>
+      </Container>
+    );
+  }
+
+  return (
+    <section className="py-12">
+      <Container>
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Book Image */}
+          <div className="lg:w-1/3">
+            <Image
+              src={book.image}
+              alt={book.title}
+              width={500}
+              height={700}
+              className="rounded-lg shadow-lg object-cover w-full"
+            />
+          </div>
+
+          {/* Book Details */}
+          <div className="lg:w-2/3 space-y-6">
+            <h1 className="text-5xl font-bold text-primary">{book.title}</h1>
+            <p className="text-xl text-secondary font-semibold">By {book.author}</p>
+            <p className="text-base-content text-lg">{book.description}</p>
+            <p className="text-3xl font-bold text-primary">
+              ৳{book.price}
+            </p>
+
+            <div className="flex flex-wrap gap-4 mt-6">
+              <Link href="/all-books" className="btn btn-secondary">
+                Back to Books
+              </Link>
+              <button className="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
