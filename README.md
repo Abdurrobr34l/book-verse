@@ -92,7 +92,9 @@ Frontend: Next.js 15/16 (App Router), React 19
 
 Backend / Data: Express.js API or JSON file
 
-Styling: TailwindCSS (DaisyUI optional)
+Styling: TailwindCSS, DaisyUI
+
+Additional: React-icons
 
 Authentication: Cookies for mock login (NextAuth.js optional for social login)
 ```

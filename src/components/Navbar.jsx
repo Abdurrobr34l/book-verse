@@ -1,12 +1,14 @@
 "use client";
+
 import Container from "@/Utilities/Container";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import logoImage from "../../public/logo.png";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 export default function Navbar() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   // Toggle theme
   useEffect(() => {
@@ -15,32 +17,81 @@ export default function Navbar() {
   }, [dark]);
 
   return (
-    <nav className="bg-base-200/80 sticky top-0 z-50 w-full shadow backdrop-blur-md">
+    <nav className="navbar bg-base-200/50 sticky top-0 py-4 z-50 backdrop-blur-md shadow">
       <Container>
-        <div className="flex justify-between h-20 items-center">
-          {/* Logo / Site Name */}
-          <div className="shrink-0 font-bold text-2xl text-primary">
-            <Link href="/">
-              <Image src={logoImage} alt="It is website logo" width={50} height={50} priority/>
+        <div className="w-full flex justify-between items-center">
+
+          {/* ---------- Navbar Start ---------- */}
+          <div className="navbar-start">
+
+            {/* Mobile Dropdown */}
+            <div className="dropdown lg:hidden">
+              <label tabIndex={0} className="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/">Home</Link></li>
+                <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/items">Books</Link></li>
+                <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/login">Login</Link></li>
+              </ul>
+            </div>
+
+            {/* Logo */}
+            <Link href="/" className="btn btn-ghost text-xl">
+              <Image
+                src={logoImage}
+                alt="BookVerse Logo"
+                width={50}
+                height={50}
+                priority
+              />
             </Link>
           </div>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex space-x-4">
-            <Link href="/" className="btn btn-ghost btn-sm">Home</Link>
-            <Link href="/items" className="btn btn-ghost btn-sm">Books</Link>
-            <Link href="/login" className="btn btn-ghost btn-sm">Login</Link>
+          {/* ---------- Navbar Center (Desktop) ---------- */}
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal px-1 gap-2">
+              <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/">Home</Link></li>
+              <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/items">Books</Link></li>
+              <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/login">Login</Link></li>
+            </ul>
           </div>
 
-          {/* Dark Mode Toggle */}
-          <div>
-            <button
-              className="btn btn-primary btn-sm"
-              onClick={() => setDark(!dark)}
-            >
-              {dark ? "Light Mode" : "Dark Mode"}
-            </button>
+          {/* ---------- Navbar End ---------- */}
+          <div className="navbar-end">
+            <label className="swap swap-rotate">
+              {/* checkbox controls the theme */}
+              <input
+                type="checkbox"
+                checked={dark}
+                onChange={() => setDark(!dark)}
+              />
+
+              {/* light mode icon */}
+              <FiSun className="swap-off h-7 w-7 text-accent" />
+
+              {/* dark mode icon */}
+              <FiMoon className="swap-on h-7 w-7 text-accent" />
+            </label>
           </div>
+
+
         </div>
       </Container>
     </nav>

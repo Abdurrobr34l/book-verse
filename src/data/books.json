@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 450,
+    "description": "A practical guide to building good habits.",
+    "image": "/books/atomic-habits.jpg"
+  },
+  {
+    "id": "2",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 350,
+    "description": "A philosophical novel about destiny and dreams.",
+    "image": "/books/the-alchemist.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "price": 500,
+    "description": "A young wizard embarks on magical adventures.",
+    "image": "/books/harry-potter.jpg"
+  },
+  {
+    "id": "4",
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 400,
+    "description": "A dystopian novel about surveillance and freedom.",
+    "image": "/books/1984.jpg"
+  },
+  {
+    "id": "5",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "price": 380,
+    "description": "A counterintuitive approach to living a better life.",
+    "image": "/books/subtle-art.jpg"
+  }
+]
