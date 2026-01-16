@@ -46,7 +46,7 @@ BookVerse is a simple book catalog web application built using **Next.js (App Ro
   Public page showcasing Hero, About, Featured Books, Categories, Popular Authors, Testimonials, and Contact sections.
 
 - **Authentication:**  
-  Mock login protects `/books/add`. Stores credentials in cookies. Optional integration with NextAuth.js for social login.
+  Mock login protects `/add-book`. Stores credentials in cookies. Optional integration with NextAuth.js for social login.
 
 - **Book List Page:**  
   Public page that fetches books from JSON/Express API and displays their information.
