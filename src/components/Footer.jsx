@@ -16,6 +16,7 @@ export default function Footer() {
           <Link href="/" className="font-medium hover:text-accent">Home</Link>
           <Link href="/" className="font-medium hover:text-accent">About Us</Link>
           <Link href="/all-books" className="font-medium hover:text-accent">Books</Link>
+          <Link href="/add-book" className="font-medium hover:text-accent">Add Book</Link>
           <Link href="/login" className="font-medium hover:text-accent">Login</Link>
         </div>
 

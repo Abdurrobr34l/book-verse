@@ -48,6 +48,7 @@ export default function Navbar() {
               >
                 <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/">Home</Link></li>
                 <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/all-books">Books</Link></li>
+                <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/add-book">Add Book</Link></li>
                 <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/login">Login</Link></li>
               </ul>
             </div>
@@ -69,6 +70,7 @@ export default function Navbar() {
             <ul className="menu menu-horizontal px-1 gap-2">
               <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/">Home</Link></li>
               <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/all-books">Books</Link></li>
+              <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/add-book">Add Book</Link></li>
               <li><Link className="font-semibold hover:text-accent hover:bg-transparent" href="/login">Login</Link></li>
             </ul>
           </div>
