@@ -94,7 +94,7 @@ Backend / Data: Express.js API or JSON file
 
 Styling: TailwindCSS, DaisyUI
 
-Additional: React-icons
+Additional: React-icons, React-hot-toast
 
 Authentication: Cookies for mock login (NextAuth.js optional for social login)
 ```

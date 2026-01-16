@@ -1,18 +1,15 @@
-import React from "react";
+"use client";
+
+import { useParams } from "next/navigation";
 import Container from "@/Utilities/Container";
 import books from "@/data/books.json";
 import Image from "next/image";
 import Link from "next/link";
 
-// params comes from Next.js App Router
-export default function BookDetailsPage({ params }) {
-  const { id } = params;
-
-  // Find book by id
-    // const { id } = params;
-  console.log("PARAMS ID:", id); // <-- Add this
-  const book = books.find((b) => b.id === id);
-  console.log("BOOK FOUND:", book); // <-- Add this
+export default function BookDetailsPage() {
+  const params = useParams();       // Next.js hook for dynamic params
+  const id = params?.id;            // safely get id
+  const book = books.find((b) => b.id.toString() === id); // convert id to string
 
   if (!book) {
     return (
@@ -45,9 +42,7 @@ export default function BookDetailsPage({ params }) {
             <h1 className="text-5xl font-bold text-primary">{book.title}</h1>
             <p className="text-xl text-secondary font-semibold">By {book.author}</p>
             <p className="text-base-content text-lg">{book.description}</p>
-            <p className="text-3xl font-bold text-primary">
-              ৳{book.price}
-            </p>
+            <p className="text-3xl font-bold text-primary">৳{book.price}</p>
 
             <div className="flex flex-wrap gap-4 mt-6">
               <Link href="/all-books" className="btn btn-secondary">
