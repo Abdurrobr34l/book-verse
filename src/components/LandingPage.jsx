@@ -6,7 +6,6 @@ import Container from "@/Utilities/Container";
 export default function LandingPage() {
   return (
     <div className="space-y-24">
-
       {/* ---------- Section 1: Hero ---------- */}
       <section className="min-h-[70vh] bg-base-200 rounded-lg p-8">
         <Container>
@@ -96,12 +95,27 @@ export default function LandingPage() {
       <section className="p-8 bg-base-200 rounded-lg">
         <h2 className="text-4xl font-bold text-primary mb-6 text-center">Popular Authors</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
-          {["James Clear", "Paulo Coelho", "J.K. Rowling", "George Orwell", "Malcolm Gladwell", "Agatha Christie"].map((author) => (
-            <div key={author} className="flex flex-col items-center space-y-2">
+          {[
+            { name: "James Clear", image: "/books-authors/james-clear.webp" },
+            { name: "Paulo Coelho", image: "/books-authors/paulo-coelho.webp" },
+            { name: "J.K. Rowling", image: "/books-authors/jk-rowling.jpeg" },
+            { name: "George Orwell", image: "/books-authors/george-orwell.jpeg" },
+            { name: "Malcolm Gladwell", image: "/books-authors/malcolm-gladwell.jpeg" },
+            { name: "Agatha Christie", image: "/books-authors/agatha-christie.jpeg" }
+          ].map((author) => (
+            <div key={author.name} className="flex flex-col items-center space-y-2">
               <div className="avatar">
-                <div className="w-24 h-24 rounded-full bg-neutral"></div>
+                <div className="w-24 h-24 rounded-full overflow-hidden">
+                  <Image
+                    src={author.image}
+                    alt={author.name}
+                    width={96}
+                    height={96}
+                    className="object-cover"
+                  />
+                </div>
               </div>
-              <p className="text-center text-base-content">{author}</p>
+              <p className="text-center text-base-content">{author.name}</p>
             </div>
           ))}
         </div>
