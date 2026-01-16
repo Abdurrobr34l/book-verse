@@ -127,17 +127,42 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold text-primary mb-6 text-center">What Readers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "Aisha", review: "BookVerse helped me discover amazing books I never knew!" },
-              { name: "Rafi", review: "The UI is clean and browsing is super easy." },
-              { name: "Sara", review: "Love the featured books and categories!" },
+              {
+                name: "Wuin Jween",
+                review: "BookVerse helped me discover amazing books I never knew!",
+                image: "/reviewers/wuin-jween.jpg"
+              },
+              {
+                name: "Rafi Ahmed",
+                review: "The UI is clean and browsing is super easy.",
+                image: "/reviewers/rafi-ahmed.jpg"
+              },
+              {
+                name: "Alex Johnson",
+                review: "Love the featured books and categories!",
+                image: "/reviewers/alex-johnson.avif"
+              },
             ].map((t, i) => (
-              <div key={i} className="card bg-base-300 shadow p-6 hover:shadow-lg transition">
+              <div
+                key={i}
+                className="card bg-base-300 shadow p-6 hover:shadow-lg transition flex flex-col items-center text-center"
+              >
+                <div className="w-16 h-16 rounded-full overflow-hidden mb-4">
+                  <Image
+                    src={t.image}
+                    alt={`${t.name} reviewer`}
+                    width={64}
+                    height={64}
+                    className="object-cover"
+                  />
+                </div>
                 <p className="italic text-base-content">{t.review}</p>
-                <p className="font-bold mt-4 text-primary">- {t.name}</p>
+                <p className="font-bold mt-4 text-primary">— {t.name}</p>
               </div>
             ))}
           </div>
         </Container>
+
       </section>
 
       {/* ---------- Section 7: Call to Action ---------- */}
